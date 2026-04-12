@@ -14,5 +14,5 @@ Projek latihan membuat website, yaitu website menguji kecepatan mengetik
 - Fitur Fun
 
 # ✨ Author 
-Dibuat oleh Fadhil
+Dibuat oleh saya Fadhil, 
 Sebagai bagian dari perjalanan belajar Web Development
