@@ -257,6 +257,10 @@ main {
     width: 1px;
 }
 
+.results[hidden] {
+    display: none;
+}
+
 .results {
     position: absolute;
     inset: 0;
