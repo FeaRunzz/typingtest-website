@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TideType — tempat tenang untuk berlatih mengetik</title>
+    <meta name="description" content="TideType adalah typing test minimalis dengan ambience suara alami: hujan, kafe, hutan, laut, dan salju.">
+    <link rel="icon" href="data:,">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+
+    <header class="topbar">
+        <span class="wordmark">Tide<em>Type</em></span>
+
+        <div class="topbar-controls">
+            <div class="segmented" role="group" aria-label="Durasi tes">
+                <button type="button" class="segmented-option is-active" data-duration="15">15s</button>
+                <button type="button" class="segmented-option" data-duration="30">30s</button>
+                <button type="button" class="segmented-option" data-duration="60">60s</button>
+            </div>
+
+            <div class="segmented" role="group" aria-label="Bahasa teks">
+                <button type="button" class="segmented-option is-active" data-lang="id">ID</button>
+                <button type="button" class="segmented-option" data-lang="en">EN</button>
+            </div>
+
+            <button type="button" class="icon-toggle" id="themeToggle" aria-label="Ganti ke tema gelap">
+                <span class="icon-toggle-mark" aria-hidden="true">☾</span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <p class="kicker">Ayo uji kecepatan mengetik kamu, sambil menikmati suasana yang tenang.</p>
+
+        <section class="stat-row" aria-live="off">
+            <div class="stat">
+                <span class="stat-value" id="statWpm">0</span>
+                <span class="stat-label">wpm</span>
+            </div>
+            <div class="stat">
+                <span class="stat-value" id="statAccuracy">100%</span>
+                <span class="stat-label">akurasi</span>
+            </div>
+            <div class="stat">
+                <span class="stat-value" id="statTime">15</span>
+                <span class="stat-label">detik</span>
+            </div>
+        </section>
+
+        <section class="typing-panel">
+            <div class="typing-panel-inner">
+                <p class="typing-text" id="typingText" aria-hidden="true"></p>
+                <input
+                    type="text"
+                    id="typingInput"
+                    class="typing-input"
+                    autocomplete="off"
+                    autocapitalize="off"
+                    autocorrect="off"
+                    spellcheck="false"
+                    aria-label="Ketik teks di atas di sini"
+                >
+            </div>
+
+            <div class="results" id="results" hidden>
+                <p class="results-headline">Selesai.</p>
+                <div class="results-grid">
+                    <div>
+                        <span class="results-value" id="resultWpm">0</span>
+                        <span class="results-label">wpm</span>
+                    </div>
+                    <div>
+                        <span class="results-value" id="resultAccuracy">0%</span>
+                        <span class="results-label">akurasi</span>
+                    </div>
+                    <div>
+                        <span class="results-value" id="resultChars">0</span>
+                        <span class="results-label">karakter</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <button type="button" class="restart-button" id="restartButton" aria-label="Ulangi tes">
+            <span aria-hidden="true">⟲</span> Ulangi
+        </button>
+
+        <section class="ambience" aria-label="Ambience suara">
+            <div class="ambience-header">
+                <span class="ambience-title">🎧 Ambience</span>
+                <label class="volume">
+                    <span class="sr-only">Volume ambience</span>
+                    <input type="range" id="volumeSlider" min="0" max="100" value="35">
+                </label>
+            </div>
+            <div class="ambience-options" id="ambienceOptions">
+                <button type="button" class="ambience-pill" data-ambience="rain">
+                    <span class="ambience-pill-icon" aria-hidden="true">🌧</span> Rain
+                </button>
+                <button type="button" class="ambience-pill" data-ambience="cafe">
+                    <span class="ambience-pill-icon" aria-hidden="true">☕</span> Cafe
+                </button>
+                <button type="button" class="ambience-pill" data-ambience="forest">
+                    <span class="ambience-pill-icon" aria-hidden="true">🌲</span> Forest
+                </button>
+                <button type="button" class="ambience-pill" data-ambience="ocean">
+                    <span class="ambience-pill-icon" aria-hidden="true">🌊</span> Ocean
+                </button>
+                <button type="button" class="ambience-pill" data-ambience="snow">
+                    <span class="ambience-pill-icon" aria-hidden="true">❄</span> Snow
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>TideType. Made by Fadhil.</p>
+        <nav class="footer-links">
+            <a href="https://github.com/FeaRunzz" target="_blank" rel="noopener">GitHub</a>
+        </nav>
+    </footer>
+
+    <script src="script/script.js"></script>
+</body>
+</html>
